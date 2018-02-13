@@ -26,4 +26,8 @@ subprojects {
 	buildSoy {
 		source = ['src']
 	} 
+	
+	task cleanSoy(type: Delete) {
+		delete fileTree(dir: "src", include: "**/*.soy.js")
+	}
 }
